@@ -37,5 +37,7 @@ int main()
         if (isDivisibleBy3or5(i))
             sum += i;
 
-    std::cout << std::format("The sum of numbers divisible by 3 or 5 up to {} is {}", limit, sum);
+    std::cout << std::format("The sum of numbers divisible by 3 or 5 up to {} is {}", 
+                             limit, 
+                             sum);
 }
