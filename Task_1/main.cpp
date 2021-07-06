@@ -1,9 +1,10 @@
 // C++20 Challange
 // 
-// 1. Сумма натуральных чисел, делящаяся на 3 и 5.
+// 1. Sum of naturals divisible by 3 and 5.
 // 
-// Напишите программу, которая вычисляет и выводит сумму всех целых чисел, 
-// делящиеся на 3 или 5, до определенного числа, введенного пользователем.
+// Write a program that calculates and prints the sum of all the natural
+// numbers divisible by either 3 or 5, up to a given limit entered by the
+// user.
 
 #include <iostream>
 #include <format>
@@ -13,7 +14,7 @@ auto getInt()
 {
     auto value{ 0 };
     while (!(std::cin >> value)) {
-        std::cerr << "Неверный ввод.\n";
+        std::cerr << "Invalid input.\n";
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');   
     } 
@@ -26,8 +27,7 @@ bool isDivisibleBy3or5(auto i) {
 
 int main()
 {
-    setlocale(LC_ALL, "ru");
-    std::cout << "Введите число: ";
+    std::cout << "Enter the number: ";
 
     auto limit{ getInt() };
 
@@ -37,5 +37,5 @@ int main()
         if (isDivisibleBy3or5(i))
             sum += i;
 
-    std::cout << std::format("Сумма чисел делящихся на 3 или 5 до {} равна {}", limit, sum);
+    std::cout << std::format("The sum of numbers divisible by 3 or 5 up to {} is {}", limit, sum);
 }
